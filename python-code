@@ -1,0 +1,73 @@
+n = 123456
+count = 0
+while n>0:
+	n=n//10
+	count+=1
+print(count)
+-------------------------------------------------------
+n1 = 12345678
+c=0
+for i in str(n1):
+	c+=1
+print(c)
+--------------------------------------------------------
+n2 = "Python"
+for i in n2:
+	print(i)
+---------------------------------------------------------
+a = input("Enter String")
+count = 0
+for i in a:
+	count+=1
+print(count)
+----------------------------------------------------------
+n = int(input("Enter no"))
+count = 0
+for i in range(1,n+1):
+	if n % i == 0:
+		count +=1
+
+if count == 2:
+	print("Prime")
+else:
+	print("Not Prime")
+
+#-----------PRIME NO-----------------
+
+num = int(input("Enter Any No: "))
+if num <= 1:
+	print("Not Prime")
+else:
+	for i in range(2, num):
+		if num % i == 0:
+			print("Not Prime")
+			break
+	else:
+		print("Prime")
+
+#---------------ARMSTRONG------------
+
+num = int(input("Enter Any No: "))
+temp = num
+power = len(str(num))
+total = 0
+while num > 0:
+	digit = num % 10
+	total = total + digit ** power
+	num = num // 10
+if total == temp:
+	print(f"{total} Is Armstrong Number")
+else:
+	print(f"{total} Is Not Armstrong Number")
+
+#---------------------------------------------#
+
+n = int(input("Enter Any No. "))
+power = len(str(n))  #153 = 3
+
+total = sum(int(digit) ** power for digit in str(n))
+
+if total == n:
+	print("Armstrong")
+else:
+	print("Not Armstrong")
