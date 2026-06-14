@@ -145,7 +145,7 @@ while count < n:
 """
 
 num = int(input("Enter a number: "))
-square = num * num
+square = num ** 2
 if str(square).endswith(str(num)):
     print("Automorphic Number")
 else:
